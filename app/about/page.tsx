@@ -18,8 +18,20 @@ const Projects = [
     href: "https://laravel.com",
   },
   {
+    name: "Fly Super",
+    href: "https://flysuper.com",
+  },
+  {
+    name: "Offer Arc",
+    href: "https://offerarc.com",
+  },
+  {
     name: "9d8",
     href: "https://9d8.dev",
+  },
+  {
+    name: "Alpine Codex",
+    href: "https://alpinecodex.com",
   },
   {
     name: "Wrk.so",
@@ -28,10 +40,6 @@ const Projects = [
   {
     name: "Router.so",
     href: "https://router.so",
-  },
-  {
-    name: "Outr",
-    href: "https://outr.io",
   },
   {
     name: "Wavefinder",
@@ -48,14 +56,6 @@ const Projects = [
   {
     name: "Route",
     href: "https://route.com",
-  },
-  {
-    name: "Rem Blair",
-    href: "https://remblair.com",
-  },
-  {
-    name: "Studio Mojave",
-    href: "https://studiomojave.com",
   },
   {
     name: "Zion",
@@ -97,11 +97,17 @@ export default function About() {
 
       <div className="space-y-2 sm:space-y-0">
         <h3 className="mb-3"> &rarr; PROJECTS / PARTNERS / VENTURES</h3>
-        {Projects.map((project) => (
-          <OutLink block key={project.name} href={project.href}>
-            {project.name}
-          </OutLink>
-        ))}
+        <div className="grid sm:max-w-3xl grid-cols-2 sm:grid-cols-3">
+          {Projects.map((project) => (
+            <OutLink block key={project.name} href={project.href}>
+              {project.name}
+            </OutLink>
+          ))}
+          <span className="sm:w-fit group transition-all p-1.5 sm:p-0 border sm:border-0">
+            {" "}
+            + MORE
+          </span>
+        </div>
       </div>
 
       <div>
@@ -127,7 +133,7 @@ const OutLink = ({
   return (
     <a
       href={href}
-      className={`sm:w-fit group transition-all hover:text-blue-800 text-blue-600 p-2 sm:p-0 border sm:border-0 ${
+      className={`sm:w-fit group transition-all hover:text-blue-800 text-blue-600 p-1.5 sm:p-0 border sm:border-0 ${
         block ? "block" : "inline"
       }`}
     >
