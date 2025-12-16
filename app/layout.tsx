@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Geist_Mono as Font } from "next/font/google";
+import { Manrope } from "next/font/google";
 import "./globals.css";
 
 import { Analytics } from "@vercel/analytics/react";
 
-const font = Font({ subsets: ["latin"] });
+const font = Manrope({ subsets: ["latin"], weight: ["300", "400", "500", "600"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://wip.ac"),
