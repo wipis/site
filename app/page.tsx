@@ -21,7 +21,7 @@ export default function Home() {
 
         <CopyEmail />
 
-        <h2 className="z-50 absolute font-thin text-sm bottom-5 right-6 text-neutral-500 animate-blur-in-delay-3">
+        <h2 className="z-50 absolute font-thin text-sm bottom-5 left-6 text-neutral-500 animate-blur-in-delay-3">
           © 2026 / Work In Progress LLC
         </h2>
 
