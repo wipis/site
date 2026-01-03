@@ -22,7 +22,15 @@ export default function Home() {
         <CopyEmail />
 
         <h2 className="z-50 absolute font-thin text-sm bottom-5 left-6 text-neutral-500 animate-blur-in-delay-3">
-          © {new Date().getFullYear()} / Work In Progress LLC
+          © {new Date().getFullYear()} /{" "}
+          <a
+            href="https://bridger.to"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-neutral-300 transition-colors"
+          >
+            Bridger Tower
+          </a>
         </h2>
 
         <Shader
