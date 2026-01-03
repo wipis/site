@@ -3,6 +3,7 @@ import { Manrope } from "next/font/google";
 import "./globals.css";
 
 import { Analytics } from "@vercel/analytics/react";
+import { ConsoleMessage } from "./console-message";
 
 const font = Manrope({
   subsets: ["latin"],
@@ -25,6 +26,7 @@ export default function RootLayout({
       <body className={font.className}>
         {children}
         <Analytics />
+        <ConsoleMessage />
       </body>
     </html>
   );
