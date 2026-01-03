@@ -33,12 +33,7 @@ export default function Home() {
           </a>
         </h2>
 
-        <Shader
-          className="absolute w-full h-full top-0 right-0 z-10 animate-blur-in"
-          colorBack="#222"
-          colorFront="#f5f5f5"
-          speed={0.2}
-        />
+        <Shader className="absolute w-full h-full top-0 right-0 z-10 animate-blur-in" />
       </section>
     </main>
   );
