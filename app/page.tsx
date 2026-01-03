@@ -12,8 +12,11 @@ export default function Home() {
       <section className="relative h-screen w-screen overflow-hidden">
         <div className="z-50 absolute top-6 left-6 flex gap-6">
           <h1 className="sr-only">Work In Progress</h1>
-          <Image src={Icon} height={48} alt="WIP ICON"></Image>
-          <Image src={Logo} height={36} alt="WIP LOGO"></Image>
+          <PixelRearrange />
+        </div>
+
+        <div className="z-50 absolute top-6 right-6 flex gap-6">
+          <Image src={Logo} height={36} alt="WIP LOGO 2"></Image>
         </div>
 
         <h2 className="z-50 absolute font-thin text-sm bottom-5 right-6 text-neutral-500">

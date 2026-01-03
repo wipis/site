@@ -102,7 +102,7 @@ const PixelRearrange = () => {
     <div
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="inline-block bg-zinc-100 overflow-hidden"
+      className="inline-block bg-[#222] overflow-hidden"
       style={{
         width: isHovered ? "66px" : "48px",
         height: "48px",
@@ -116,7 +116,7 @@ const PixelRearrange = () => {
         fill="#f4f4f5"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <rect width="66" height="48" fill="240 4.8% 95.9%" />
+        <rect width="66" height="48" fill="#222" />
         {originalRects.map((_, index) => {
           const position = getPosition(index);
           return (
@@ -126,7 +126,7 @@ const PixelRearrange = () => {
               y={position.y}
               width="6"
               height="6"
-              fill="black"
+              fill="white"
               style={{ transition: "all 0.3s ease-in-out" }}
             />
           );
