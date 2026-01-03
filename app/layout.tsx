@@ -4,7 +4,10 @@ import "./globals.css";
 
 import { Analytics } from "@vercel/analytics/react";
 
-const font = Manrope({ subsets: ["latin"], weight: ["300", "400", "500", "600"] });
+const font = Manrope({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600"],
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://wip.ac"),
@@ -18,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="bg-zinc-100 text-zinc-950 font-light">
+    <html lang="en" className="bg-[#222] font-light">
       <body className={font.className}>
         {children}
         <Analytics />
