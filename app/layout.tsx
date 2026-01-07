@@ -13,8 +13,13 @@ const font = Manrope({
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Work In Progress / Applied Creative",
-  description: "Software Design and Development by Bridger Tower.",
+  title: "WIP — Software Design & Engineering Lab",
+  description:
+    "WIP is a software design and engineering lab focused on building thoughtful, well-crafted digital products.",
+  openGraph: {
+    title: "WIP — Software Design & Engineering Lab",
+    description: "Building software at the intersection of design and code.",
+  },
 };
 
 export default function RootLayout({
