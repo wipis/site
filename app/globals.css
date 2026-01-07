@@ -55,6 +55,17 @@
   canvas {
     background-color: var(--app-bg);
   }
+
+  /* About page - allow scrolling */
+  body:has(.about-page) {
+    overflow: auto;
+    position: static;
+  }
+
+  html:has(.about-page) {
+    overflow: auto;
+    position: static;
+  }
 }
 
 /* Blur to focus entrance animation */
@@ -85,5 +96,25 @@
 
 .animate-blur-in-delay-3 {
     animation: blur-in 0.8s ease-out 1s forwards;
+    opacity: 0;
+}
+
+.animate-blur-in-delay-4 {
+    animation: blur-in 0.8s ease-out 1.2s forwards;
+    opacity: 0;
+}
+
+.animate-blur-in-delay-5 {
+    animation: blur-in 0.8s ease-out 1.4s forwards;
+    opacity: 0;
+}
+
+.animate-blur-in-delay-6 {
+    animation: blur-in 0.8s ease-out 1.6s forwards;
+    opacity: 0;
+}
+
+.animate-blur-in-delay-7 {
+    animation: blur-in 0.8s ease-out 1.8s forwards;
     opacity: 0;
 }
