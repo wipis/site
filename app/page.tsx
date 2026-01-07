@@ -16,7 +16,7 @@ export default function Home() {
         </div>
 
         <div className="z-50 absolute top-6 right-6 flex gap-6 animate-blur-in-delay-2">
-          <Image src={Logo} height={36} alt="WIP LOGO 2"></Image>
+          <Image src={Logo} height={40} alt="WIP LOGO 2"></Image>
         </div>
 
         <CopyEmail />
