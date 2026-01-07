@@ -13,7 +13,7 @@ export function Shader({ className }: ShaderProps) {
       shape="sphere"
       type="8x8"
       pxSize={2}
-      scale={1.4}
+      scale={1}
       colorBack="#222"
       colorFront="#fff"
       speed={0.15}
