@@ -7,7 +7,7 @@ import { ConsoleMessage } from "./console-message";
 
 const font = Manrope({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
+  weight: ["300", "400"],
 });
 
 export const metadata: Metadata = {
@@ -26,7 +26,7 @@ export default function RootLayout({
       <head>
         <meta name="theme-color" content="#222" />
       </head>
-      <body className={font.className} style={{ backgroundColor: "#222" }}>
+      <body className={font.className}>
         {children}
         <Analytics />
         <ConsoleMessage />
