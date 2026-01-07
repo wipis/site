@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import { APP_BACKGROUND, APP_FOREGROUND, APP_FOREGROUND_MUTED, CONTACT_EMAIL } from "./constants";
 
 export function ConsoleMessage() {
   useEffect(() => {
@@ -13,15 +14,15 @@ export function ConsoleMessage() {
 ╚███╔███╔╝██║██║
  ╚══╝╚══╝ ╚═╝╚═╝
 `,
-      "color: #f5f5f5; background: #222;"
+      `color: ${APP_FOREGROUND}; background: ${APP_BACKGROUND};`
     );
     console.log(
       "%cLooking under the hood? I like that.",
-      "color: #888; font-size: 14px;"
+      `color: ${APP_FOREGROUND_MUTED}; font-size: 14px;`
     );
     console.log(
-      "%cGet in touch → bt@wip.ac",
-      "color: #888; font-size: 12px;"
+      `%cGet in touch → ${CONTACT_EMAIL}`,
+      `color: ${APP_FOREGROUND_MUTED}; font-size: 12px;`
     );
   }, []);
 

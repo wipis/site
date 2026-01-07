@@ -4,6 +4,7 @@ import "./globals.css";
 
 import { Analytics } from "@vercel/analytics/react";
 import { ConsoleMessage } from "./console-message";
+import { APP_BACKGROUND, SITE_URL } from "./constants";
 
 const font = Manrope({
   subsets: ["latin"],
@@ -11,7 +12,7 @@ const font = Manrope({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://wip.ac"),
+  metadataBase: new URL(SITE_URL),
   title: "Work In Progress / Applied Creative",
   description: "Software Design and Development by Bridger Tower.",
 };
@@ -22,11 +23,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="bg-[#222] font-light" style={{ backgroundColor: "#222" }}>
+    <html
+      lang="en"
+      className="bg-[var(--app-bg)] font-light"
+      style={{ backgroundColor: APP_BACKGROUND }}
+    >
       <head>
-        <meta name="theme-color" content="#222" />
+        <meta name="theme-color" content={APP_BACKGROUND} />
+        <style>{`
+          html, body {
+            background-color: ${APP_BACKGROUND};
+          }
+        `}</style>
       </head>
-      <body className={font.className}>
+      <body className={font.className} style={{ backgroundColor: APP_BACKGROUND }}>
         {children}
         <Analytics />
         <ConsoleMessage />

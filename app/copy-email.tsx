@@ -1,23 +1,36 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { CONTACT_EMAIL } from "./constants";
 
 export function CopyEmail() {
   const [copied, setCopied] = useState(false);
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  useEffect(() => {
+    return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+    };
+  }, []);
 
   const handleCopy = async () => {
     try {
       if (navigator.clipboard && navigator.clipboard.writeText) {
-        await navigator.clipboard.writeText("bt@wip.is");
+        await navigator.clipboard.writeText(CONTACT_EMAIL);
         setCopied(true);
-        setTimeout(() => setCopied(false), 2000);
+        if (timeoutRef.current) {
+          clearTimeout(timeoutRef.current);
+        }
+        timeoutRef.current = setTimeout(() => setCopied(false), 2000);
       } else {
         // Fallback: open mail client
-        window.location.href = "mailto:bt@wip.is";
+        window.location.href = `mailto:${CONTACT_EMAIL}`;
       }
     } catch {
       // Fallback: open mail client
-      window.location.href = "mailto:bt@wip.is";
+      window.location.href = `mailto:${CONTACT_EMAIL}`;
     }
   };
 
@@ -26,7 +39,7 @@ export function CopyEmail() {
       onClick={handleCopy}
       className="z-100 fixed font-thin text-sm bottom-5 right-6 text-neutral-300 sm:text-neutral-500 hover:text-neutral-300 transition-colors animate-blur-in-delay-3 cursor-pointer px-2 py-1 rounded-sm"
     >
-      {copied ? "copied" : "bt@wip.is"}
+      {copied ? "copied" : CONTACT_EMAIL}
     </button>
   );
 }
