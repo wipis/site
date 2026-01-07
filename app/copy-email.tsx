@@ -6,7 +6,7 @@ export function CopyEmail() {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = async () => {
-    await navigator.clipboard.writeText("bt@wip.ac");
+    await navigator.clipboard.writeText("bt@wip.is");
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -16,7 +16,7 @@ export function CopyEmail() {
       onClick={handleCopy}
       className="z-50 absolute font-thin text-sm bottom-5 right-6 text-neutral-500 hover:text-neutral-300 transition-colors animate-blur-in-delay-3 cursor-pointer"
     >
-      {copied ? "copied" : "bt@wip.ac"}
+      {copied ? "copied" : "bt@wip.is"}
     </button>
   );
 }
