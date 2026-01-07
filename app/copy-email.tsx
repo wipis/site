@@ -6,15 +6,25 @@ export function CopyEmail() {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = async () => {
-    await navigator.clipboard.writeText("bt@wip.is");
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        await navigator.clipboard.writeText("bt@wip.is");
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
+      } else {
+        // Fallback: open mail client
+        window.location.href = "mailto:bt@wip.is";
+      }
+    } catch {
+      // Fallback: open mail client
+      window.location.href = "mailto:bt@wip.is";
+    }
   };
 
   return (
     <button
       onClick={handleCopy}
-      className="z-50 absolute font-thin text-sm bottom-5 right-6 text-neutral-500 hover:text-neutral-300 transition-colors animate-blur-in-delay-3 cursor-pointer"
+      className="z-[100] fixed font-thin text-sm bottom-5 right-6 text-neutral-300 sm:text-neutral-500 hover:text-neutral-300 transition-colors animate-blur-in-delay-3 cursor-pointer bg-[#222]/80 px-2 py-1 rounded"
     >
       {copied ? "copied" : "bt@wip.is"}
     </button>

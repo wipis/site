@@ -33,7 +33,7 @@ export default function Home() {
           </a>
         </h2>
 
-        <Shader className="scale-[1.15] sm:scale-105 lg:scale-125 absolute w-full h-full top-0 right-0 z-10 animate-blur-in" />
+        <Shader className="scale-[1.15] sm:scale-105 lg:scale-125 absolute w-full h-full top-0 right-0 z-10 animate-blur-in pointer-events-none" />
       </section>
     </main>
   );
