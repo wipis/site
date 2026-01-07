@@ -22,8 +22,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="bg-[#222] font-light">
-      <body className={font.className}>
+    <html lang="en" className="bg-[#222] font-light" style={{ backgroundColor: "#222" }}>
+      <head>
+        <meta name="theme-color" content="#222" />
+      </head>
+      <body className={font.className} style={{ backgroundColor: "#222" }}>
         {children}
         <Analytics />
         <ConsoleMessage />
