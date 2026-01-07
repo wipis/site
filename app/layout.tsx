@@ -13,12 +13,12 @@ const font = Manrope({
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "WIP — Software Design & Engineering Lab",
+  title: "WIP — Product Design & Engineering Lab",
   description:
-    "WIP is a software design and engineering lab focused on building thoughtful, well-crafted digital products.",
+    "WIP is a product design and engineering lab focused on building thoughtful, well-crafted digital products.",
   openGraph: {
-    title: "WIP — Software Design & Engineering Lab",
-    description: "Building software at the intersection of design and code.",
+    title: "WIP — Product Design & Engineering Lab",
+    description: "Building products at the intersection of design and code.",
   },
 };
 
