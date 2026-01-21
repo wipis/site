@@ -37,7 +37,7 @@ export default function Home() {
 
         <Link
           href="/about"
-          className="z-50 absolute font-thin text-sm bottom-5 right-6 text-neutral-500 hover:text-neutral-300 transition-colors animate-blur-in-delay-3"
+          className="z-50 absolute font-thin text-sm bottom-11 left-6 text-neutral-300 sm:text-neutral-500 hover:text-neutral-300 transition-colors animate-blur-in-delay-3"
         >
           About
         </Link>
