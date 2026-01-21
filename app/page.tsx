@@ -1,5 +1,6 @@
 import PixelRearrange from "./wip";
 import Image from "next/image";
+import Link from "next/link";
 import Logo from "@/public/logo.svg";
 
 import { Shader } from "./shader";
@@ -33,6 +34,13 @@ export default function Home() {
             {COPYRIGHT_NAME}
           </a>
         </h2>
+
+        <Link
+          href="/about"
+          className="z-50 absolute font-thin text-sm bottom-5 right-6 text-neutral-500 hover:text-neutral-300 transition-colors animate-blur-in-delay-3"
+        >
+          About
+        </Link>
 
         <Shader className="scale-[1.15] sm:scale-105 lg:scale-125 absolute w-full h-full top-0 right-0 z-10 animate-blur-in pointer-events-none bg-[var(--app-bg)]" />
       </section>
