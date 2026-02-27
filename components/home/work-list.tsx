@@ -23,28 +23,32 @@ const WORK_ITEMS: WorkItem[] = [
 
 export function WorkList() {
   return (
-    <section className="animate-blur-in-delay-4" aria-labelledby="work-heading">
+    <section className="pt-12 animate-blur-in-delay-4" aria-labelledby="work-heading">
       <h3
         id="work-heading"
-        className="text-xs tracking-[0.06em] uppercase text-[var(--app-fg-muted)] mb-2"
+        className="text-sm tracking-[0.08em] uppercase text-[var(--app-fg)] mb-4 pb-1 border-b border-[var(--app-fg)]/20"
       >
         Work
       </h3>
 
-      <ul className="divide-y divide-[var(--app-fg-muted)]/20">
+      <ul className="space-y-1">
         {WORK_ITEMS.map((item) => (
-          <li key={item.company} className="py-2">
+          <li key={item.company} className="py-1.5">
             {item.href ? (
               <a
                 href={item.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex flex-col gap-1.5 sm:flex-row sm:items-center sm:justify-between"
+                className="group flex items-center gap-2"
               >
-                <span className="text-sm leading-none font-light tracking-tight text-[var(--app-fg)]">
+                <span className="shrink-0 text-sm leading-none font-light tracking-tight text-[var(--app-fg)]">
                   {item.company}
                 </span>
-                <span className="flex flex-wrap gap-1 sm:justify-end">
+                <span
+                  aria-hidden="true"
+                  className="h-px flex-1 bg-[var(--app-fg-muted)]/20"
+                />
+                <span className="shrink-0 flex flex-wrap gap-1 justify-end">
                   {item.contributions.map((tag) => (
                     <span
                       key={tag}
@@ -56,11 +60,15 @@ export function WorkList() {
                 </span>
               </a>
             ) : (
-              <span className="flex flex-col gap-1.5 sm:flex-row sm:items-center sm:justify-between">
-                <span className="text-sm leading-none font-light tracking-tight text-[var(--app-fg)]/80">
+              <span className="flex items-center gap-2">
+                <span className="shrink-0 text-sm leading-none font-light tracking-tight text-[var(--app-fg)]/80">
                   {item.company}
                 </span>
-                <span className="flex flex-wrap gap-1 sm:justify-end">
+                <span
+                  aria-hidden="true"
+                  className="h-px flex-1 bg-[var(--app-fg-muted)]/20"
+                />
+                <span className="shrink-0 flex flex-wrap gap-1 justify-end">
                   {item.contributions.map((tag) => (
                     <span
                       key={tag}

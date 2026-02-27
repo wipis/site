@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import "lenis/dist/lenis.css";
 
 import { Analytics } from "@vercel/analytics/react";
 import { ConsoleMessage } from "./console-message";
 import { SITE_URL } from "./constants";
+import { LenisProvider } from "@/components/providers/lenis-provider";
 import { ThemeProvider } from "@/components/theme-provider";
 
 const font = Inter({
@@ -40,9 +42,11 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
-          <Analytics />
-          <ConsoleMessage />
+          <LenisProvider>
+            {children}
+            <Analytics />
+            <ConsoleMessage />
+          </LenisProvider>
         </ThemeProvider>
       </body>
     </html>

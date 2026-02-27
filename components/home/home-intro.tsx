@@ -1,7 +1,7 @@
 export function HomeIntro() {
   return (
     <section className="grid gap-3">
-      <h2 className="text-[2rem] font-light tracking-tight animate-blur-in-delay-1">
+      <h2 className="text-[2rem] font-light tracking-tight animate-blur-in-delay-1 mb-2">
         Work in Progress
       </h2>
 

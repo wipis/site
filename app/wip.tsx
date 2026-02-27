@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 
 const TILE_SIZE = 6;
-const TILE_FILL = "white";
+const TILE_FILL = "var(--app-fg)";
 const SVG_WIDTH = 66;
 const SVG_HEIGHT = 48;
 const COLLAPSED_WIDTH = 48;
@@ -119,7 +119,7 @@ const PixelRearrange = () => {
         width={SVG_WIDTH}
         height={SVG_HEIGHT}
         viewBox={`0 0 ${SVG_WIDTH} ${SVG_HEIGHT}`}
-        fill="#f4f4f5"
+        fill="var(--app-fg)"
         xmlns="http://www.w3.org/2000/svg"
       >
         <rect width={SVG_WIDTH} height={SVG_HEIGHT} fill="var(--app-bg)" />

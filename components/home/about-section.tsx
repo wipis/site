@@ -2,10 +2,10 @@ import { CONTACT_EMAIL } from "@/app/constants";
 
 export function AboutSection() {
   return (
-    <section id="about" aria-labelledby="about-heading">
+    <section id="about" className="pt-12" aria-labelledby="about-heading">
       <h3
         id="about-heading"
-        className="text-xs tracking-[0.06em] uppercase text-[var(--app-fg-muted)] mb-3 animate-blur-in-delay-5"
+        className="text-sm tracking-[0.08em] uppercase text-[var(--app-fg)] mb-4 pb-1 border-b border-[var(--app-fg)]/20 animate-blur-in-delay-5"
       >
         About
       </h3>
@@ -34,15 +34,6 @@ export function AboutSection() {
           experience, especially in AI products where most teams still
           over-index on complexity.
         </p>
-
-        <div className="pt-2">
-          <h4 className="text-xs tracking-[0.06em] uppercase text-[var(--app-fg-muted)] mb-2 animate-blur-in-delay-7">
-            Services
-          </h4>
-          <p className="animate-blur-in-delay-7">
-            Core focus: AI, Brand, Design, Marketing, Product, Web.
-          </p>
-        </div>
 
         <p className="animate-blur-in-delay-7">
           If you&apos;re working on similar questions,{" "}
