@@ -12,37 +12,37 @@ export function AboutSection() {
 
       <div className="space-y-4 text-sm text-[var(--app-fg-muted)]">
         <p className="animate-blur-in-delay-6">
-          WIP is a software design and engineering studio focused on building at
-          the intersection of design, AI, and human-computer interaction.
+          I&apos;m Bridger Tower. WIP is my design and engineering studio,
+          focused on building products at the intersection of AI, design, and
+          human-computer interaction.
         </p>
 
         <p className="animate-blur-in-delay-7">
-          Here&apos;s what we believe: AI is extraordinarily powerful, but most
-          AI tools are extraordinarily bad at helping people actually use that
-          power. They&apos;re built by engineers who understand the technology
-          but not the people using it. And that&apos;s a problem.
+          I come from a marketing and advertising background, so I care deeply
+          about what people actually do, not just what software can do in
+          theory.
         </p>
 
         <p className="animate-blur-in-delay-7">
-          WIP comes from a background in marketing and advertising, which means
-          years of understanding what makes people click, what makes them
-          frustrated, and what makes them come back.
+          My work is about making advanced systems feel clear and practical:
+          strong product thinking, sharp interaction design, clean execution,
+          and business outcomes.
         </p>
 
         <p className="animate-blur-in-delay-7">
-          Our focus is on closing the gap between what AI can do and what
-          people need it to do. We design systems that feel simple and
-          intuitive on the surface while running sophisticated technology
-          underneath. No confusing interfaces. No fighting with prompts. Just
-          tools that work the way you think.
+          I focus on closing the gap between technical capability and usable
+          experience, especially in AI products where most teams still
+          over-index on complexity.
         </p>
 
-        <p className="animate-blur-in-delay-7">
-          We&apos;re interested in the hard problems: How do you make AI feel
-          natural? How do you design interfaces that make complex technology
-          accessible? How do you build software that actually solves problems
-          instead of creating new ones?
-        </p>
+        <div className="pt-2">
+          <h4 className="text-xs tracking-[0.06em] uppercase text-[var(--app-fg-muted)] mb-2 animate-blur-in-delay-7">
+            Services
+          </h4>
+          <p className="animate-blur-in-delay-7">
+            Core focus: AI, Brand, Design, Marketing, Product, Web.
+          </p>
+        </div>
 
         <p className="animate-blur-in-delay-7">
           If you&apos;re working on similar questions,{" "}

@@ -42,7 +42,7 @@ export function CopyEmail({ className = "" }: CopyEmailProps) {
     <button
       type="button"
       onClick={handleCopy}
-      className={`font-thin text-sm text-[var(--app-fg-muted)] hover:text-[var(--app-fg)] transition-colors animate-blur-in-delay-3 cursor-pointer ${className}`}
+      className={`font-light text-sm text-[var(--app-fg-muted)] hover:text-[var(--app-fg)] transition-colors animate-blur-in-delay-3 cursor-pointer ${className}`}
     >
       {copied ? "copied" : CONTACT_EMAIL}
     </button>

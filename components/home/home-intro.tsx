@@ -17,6 +17,11 @@ export function HomeIntro() {
         </a>
         . Applying design, code, and AI to drive revenue.
       </p>
+
+      <p className="text-[var(--app-fg-muted)] animate-blur-in-delay-3">
+        I help teams shape brand, product, and web experiences that are clear,
+        useful, and built to convert.
+      </p>
     </section>
   );
 }

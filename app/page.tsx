@@ -17,9 +17,7 @@ export default function Home() {
         <div className="max-w-xl grid gap-12">
           <HomeIntro />
 
-          <WorkList />
-
-          <figure className="animate-blur-in-delay-4">
+          <figure className="animate-blur-in-delay-3">
             <Image
               src={bridgeImage}
               alt="WIP studio homepage visual"
@@ -31,6 +29,8 @@ export default function Home() {
               Waterloo Bridge, London, at Sunset 1904 Claude Monet
             </figcaption>
           </figure>
+
+          <WorkList />
 
           <AboutSection />
         </div>

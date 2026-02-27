@@ -11,7 +11,7 @@ export function SiteFooter({ rightContent }: SiteFooterProps) {
     <footer className="fixed bottom-0 left-0 right-0 z-50 flex items-center justify-between p-6">
       <div className="flex items-center gap-3">
         <ModeToggle />
-        <p className="font-thin text-sm text-[var(--app-fg-muted)] animate-blur-in-delay-3">
+        <p className="font-light text-sm text-[var(--app-fg-muted)] animate-blur-in-delay-3">
           &copy; {new Date().getFullYear()} /{" "}
           <a
             href="https://bridger.to"
