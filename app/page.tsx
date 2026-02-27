@@ -28,7 +28,7 @@ export default function Home() {
               className="w-full h-auto"
             />
             <figcaption className="mt-2 text-xs text-[var(--app-fg-muted)] leading-tight whitespace-nowrap overflow-hidden text-ellipsis">
-              Waterloo Bridge, London, at Sunset 1904 Claude Monet
+              Waterloo Bridge, London, at Sunset, 1904, Claude Monet
             </figcaption>
           </figure>
 
