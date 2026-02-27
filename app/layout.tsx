@@ -4,7 +4,8 @@ import "./globals.css";
 
 import { Analytics } from "@vercel/analytics/react";
 import { ConsoleMessage } from "./console-message";
-import { APP_BACKGROUND, SITE_URL } from "./constants";
+import { SITE_URL } from "./constants";
+import { ThemeProvider } from "@/components/theme-provider";
 
 const font = Inter({
   subsets: ["latin"],
@@ -28,23 +29,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className="bg-[var(--app-bg)] font-light"
-      style={{ backgroundColor: APP_BACKGROUND }}
-    >
+    <html lang="en" className="bg-[var(--app-bg)] font-light" suppressHydrationWarning>
       <head>
-        <meta name="theme-color" content={APP_BACKGROUND} />
-        <style>{`
-          html, body {
-            background-color: ${APP_BACKGROUND};
-          }
-        `}</style>
+        <meta name="theme-color" content="#222222" />
       </head>
-      <body className={`${font.variable} font-sans`} style={{ backgroundColor: APP_BACKGROUND }}>
-        {children}
-        <Analytics />
-        <ConsoleMessage />
+      <body className={`${font.variable} font-sans`}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+          <Analytics />
+          <ConsoleMessage />
+        </ThemeProvider>
       </body>
     </html>
   );

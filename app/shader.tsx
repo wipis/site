@@ -30,13 +30,13 @@ export function Shader({ className }: ShaderProps) {
           opacity: isVisible ? 1 : 0,
           transition: "opacity 200ms ease-out",
         }}
-        shape="torus"
+        shape="wave"
         type="8x8"
-        pxSize={2}
+        pxSize={2.5}
         scale={1}
         colorBack={APP_BACKGROUND}
-        colorFront="#fff"
-        speed={0.15}
+        colorFront="#d6d6d6"
+        speed={0.04}
         rotation={0}
       />
     </div>

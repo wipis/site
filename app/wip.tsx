@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import { APP_BACKGROUND } from "./constants";
 
 const TILE_SIZE = 6;
 const TILE_FILL = "white";
@@ -123,7 +122,7 @@ const PixelRearrange = () => {
         fill="#f4f4f5"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <rect width={SVG_WIDTH} height={SVG_HEIGHT} fill={APP_BACKGROUND} />
+        <rect width={SVG_WIDTH} height={SVG_HEIGHT} fill="var(--app-bg)" />
         {ORIGINAL_RECTS.map((_, index) => {
           const position = getPosition(index, isHovered);
           return (
