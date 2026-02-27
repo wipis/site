@@ -4,6 +4,7 @@ import bridgeImage from "@/public/bridge.jpg";
 import { CopyEmail } from "./copy-email";
 import { AboutSection } from "@/components/home/about-section";
 import { HomeIntro } from "@/components/home/home-intro";
+import { StarMarks } from "@/components/home/star-marks";
 import { ServicesSection } from "@/components/home/services-section";
 import { WorkList } from "@/components/home/work-list";
 import { SiteFooter } from "@/components/site-footer";
@@ -36,6 +37,8 @@ export default function Home() {
           <AboutSection />
 
           <ServicesSection />
+
+          <StarMarks />
         </div>
       </article>
 

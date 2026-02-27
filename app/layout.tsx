@@ -16,12 +16,22 @@ const font = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "WIP — Product Design & Engineering Lab",
+  title: "WIP — Studio of Bridger Tower",
   description:
-    "WIP is a product design and engineering lab focused on building thoughtful, well-crafted digital products.",
+    "Studio of Bridger Tower. Applying design, code, and AI to drive revenue.",
   openGraph: {
-    title: "WIP — Product Design & Engineering Lab",
-    description: "Building products at the intersection of design and code.",
+    title: "WIP — Studio of Bridger Tower",
+    description:
+      "Applying design, code, and AI to drive revenue across AI, brand, design, marketing, product, and web.",
+    url: SITE_URL,
+    siteName: "WIP",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "WIP — Studio of Bridger Tower",
+    description:
+      "Applying design, code, and AI to drive revenue across AI, brand, design, marketing, product, and web.",
   },
 };
 
