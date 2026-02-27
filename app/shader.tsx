@@ -30,7 +30,7 @@ export function Shader({ className }: ShaderProps) {
           opacity: isVisible ? 1 : 0,
           transition: "opacity 200ms ease-out",
         }}
-        shape="sphere"
+        shape="torus"
         type="8x8"
         pxSize={2}
         scale={1}

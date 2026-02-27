@@ -1,9 +1,7 @@
-import Image from "next/image";
-import Link from "next/link";
-import Logo from "@/public/logo.svg";
-import PixelRearrange from "../wip";
-import { BRAND_NAME, CONTACT_EMAIL, COPYRIGHT_NAME } from "../constants";
+import { CONTACT_EMAIL } from "../constants";
 import type { Metadata } from "next";
+import { SiteHeader } from "../components/site-header";
+import { SiteFooter } from "../components/site-footer";
 
 export const metadata: Metadata = {
   title: "About — WIP",
@@ -14,17 +12,7 @@ export const metadata: Metadata = {
 export default function About() {
   return (
     <main className="about-page bg-[var(--app-bg)] min-h-screen text-[var(--app-fg)]">
-      {/* Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center p-6 bg-[var(--app-bg)]/80 backdrop-blur-sm">
-        <Link href="/" className="animate-blur-in-delay-1">
-          <h1 className="sr-only">{BRAND_NAME}</h1>
-          <PixelRearrange />
-        </Link>
-
-        <Link href="/" className="animate-blur-in-delay-2">
-          <Image src={Logo} height={40} alt="WIP Logo" />
-        </Link>
-      </header>
+      <SiteHeader />
 
       {/* Content */}
       <article className="max-w-2xl mx-auto px-6 pt-32 pb-24">
@@ -80,27 +68,16 @@ export default function About() {
         </div>
       </article>
 
-      {/* Footer */}
-      <footer className="fixed bottom-0 left-0 right-0 flex justify-between items-center p-6">
-        <p className="font-thin text-sm text-neutral-500 animate-blur-in-delay-3">
-          &copy; {new Date().getFullYear()} /{" "}
+      <SiteFooter
+        rightContent={
           <a
-            href="https://bridger.to"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-neutral-300 transition-colors"
+            href={`mailto:${CONTACT_EMAIL}`}
+            className="font-thin text-sm text-neutral-500 hover:text-neutral-300 transition-colors animate-blur-in-delay-3"
           >
-            {COPYRIGHT_NAME}
+            {CONTACT_EMAIL}
           </a>
-        </p>
-
-        <a
-          href={`mailto:${CONTACT_EMAIL}`}
-          className="font-thin text-sm text-neutral-500 hover:text-neutral-300 transition-colors animate-blur-in-delay-3"
-        >
-          {CONTACT_EMAIL}
-        </a>
-      </footer>
+        }
+      />
     </main>
   );
 }

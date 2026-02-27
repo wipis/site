@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
-import { Manrope } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
 import { Analytics } from "@vercel/analytics/react";
 import { ConsoleMessage } from "./console-message";
 import { APP_BACKGROUND, SITE_URL } from "./constants";
 
-const font = Manrope({
+const font = Inter({
   subsets: ["latin"],
-  weight: ["300", "400"],
+  variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
@@ -41,7 +41,7 @@ export default function RootLayout({
           }
         `}</style>
       </head>
-      <body className={font.className} style={{ backgroundColor: APP_BACKGROUND }}>
+      <body className={`${font.variable} font-sans`} style={{ backgroundColor: APP_BACKGROUND }}>
         {children}
         <Analytics />
         <ConsoleMessage />

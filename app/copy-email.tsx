@@ -3,7 +3,11 @@
 import { useEffect, useRef, useState } from "react";
 import { CONTACT_EMAIL } from "./constants";
 
-export function CopyEmail() {
+interface CopyEmailProps {
+  className?: string;
+}
+
+export function CopyEmail({ className = "" }: CopyEmailProps) {
   const [copied, setCopied] = useState(false);
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -36,8 +40,9 @@ export function CopyEmail() {
 
   return (
     <button
+      type="button"
       onClick={handleCopy}
-      className="z-100 fixed font-thin text-sm bottom-5 right-6 text-neutral-300 sm:text-neutral-500 hover:text-neutral-300 transition-colors animate-blur-in-delay-3 cursor-pointer px-2 py-1 rounded-sm"
+      className={`font-thin text-sm text-neutral-500 hover:text-neutral-300 transition-colors animate-blur-in-delay-3 cursor-pointer ${className}`}
     >
       {copied ? "copied" : CONTACT_EMAIL}
     </button>
