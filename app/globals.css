@@ -87,51 +87,98 @@
 
 /* Blur to focus entrance animation */
 @keyframes blur-in {
-    0% {
-        opacity: 0;
-        filter: blur(12px);
-    }
-    100% {
-        opacity: 1;
-        filter: blur(0);
-    }
+  0% {
+    opacity: 0;
+    filter: blur(10px);
+    transform: translate3d(0, 10px, 0) scale(0.995);
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+.animate-blur-in,
+.animate-blur-in-delay-1,
+.animate-blur-in-delay-2,
+.animate-blur-in-delay-3,
+.animate-blur-in-delay-4,
+.animate-blur-in-delay-5,
+.animate-blur-in-delay-6,
+.animate-blur-in-delay-7,
+.animate-blur-in-delay-8,
+.animate-blur-in-delay-9 {
+  will-change: opacity, filter, transform;
+  backface-visibility: hidden;
 }
 
 .animate-blur-in {
-    animation: blur-in 0.8s ease-out forwards;
+  animation: blur-in 1.05s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 .animate-blur-in-delay-1 {
-    animation: blur-in 0.8s ease-out 0.5s forwards;
-    opacity: 0;
+  animation: blur-in 1.05s cubic-bezier(0.22, 1, 0.36, 1) 0.18s forwards;
+  opacity: 0;
 }
 
 .animate-blur-in-delay-2 {
-    animation: blur-in 0.8s ease-out 0.7s forwards;
-    opacity: 0;
+  animation: blur-in 1.05s cubic-bezier(0.22, 1, 0.36, 1) 0.32s forwards;
+  opacity: 0;
 }
 
 .animate-blur-in-delay-3 {
-    animation: blur-in 0.8s ease-out 1s forwards;
-    opacity: 0;
+  animation: blur-in 1.05s cubic-bezier(0.22, 1, 0.36, 1) 0.46s forwards;
+  opacity: 0;
 }
 
 .animate-blur-in-delay-4 {
-    animation: blur-in 0.8s ease-out 1.2s forwards;
-    opacity: 0;
+  animation: blur-in 1.05s cubic-bezier(0.22, 1, 0.36, 1) 0.6s forwards;
+  opacity: 0;
 }
 
 .animate-blur-in-delay-5 {
-    animation: blur-in 0.8s ease-out 1.4s forwards;
-    opacity: 0;
+  animation: blur-in 1.05s cubic-bezier(0.22, 1, 0.36, 1) 0.74s forwards;
+  opacity: 0;
 }
 
 .animate-blur-in-delay-6 {
-    animation: blur-in 0.8s ease-out 1.6s forwards;
-    opacity: 0;
+  animation: blur-in 1.05s cubic-bezier(0.22, 1, 0.36, 1) 0.88s forwards;
+  opacity: 0;
 }
 
 .animate-blur-in-delay-7 {
-    animation: blur-in 0.8s ease-out 1.8s forwards;
-    opacity: 0;
+  animation: blur-in 1.05s cubic-bezier(0.22, 1, 0.36, 1) 1.02s forwards;
+  opacity: 0;
+}
+
+.animate-blur-in-delay-8 {
+  animation: blur-in 1.05s cubic-bezier(0.22, 1, 0.36, 1) 1.16s forwards;
+  opacity: 0;
+}
+
+.animate-blur-in-delay-9 {
+  animation: blur-in 1.05s cubic-bezier(0.22, 1, 0.36, 1) 1.3s forwards;
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-blur-in,
+  .animate-blur-in-delay-1,
+  .animate-blur-in-delay-2,
+  .animate-blur-in-delay-3,
+  .animate-blur-in-delay-4,
+  .animate-blur-in-delay-5,
+  .animate-blur-in-delay-6,
+  .animate-blur-in-delay-7,
+  .animate-blur-in-delay-8,
+  .animate-blur-in-delay-9 {
+    animation: none !important;
+    opacity: 1 !important;
+    filter: none !important;
+    transform: none !important;
+  }
 }

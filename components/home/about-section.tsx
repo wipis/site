@@ -2,40 +2,44 @@ import { CONTACT_EMAIL } from "@/app/constants";
 
 export function AboutSection() {
   return (
-    <section id="about" className="pt-12" aria-labelledby="about-heading">
+    <section
+      id="about"
+      className="pt-12 animate-blur-in-delay-6"
+      aria-labelledby="about-heading"
+    >
       <h3
         id="about-heading"
-        className="text-sm tracking-[0.08em] uppercase text-[var(--app-fg)] mb-4 pb-1 border-b border-[var(--app-fg)]/20 animate-blur-in-delay-5"
+        className="text-sm tracking-[0.08em] uppercase text-[var(--app-fg)] mb-4 pb-1 border-b border-[var(--app-fg)]/20"
       >
         About
       </h3>
 
       <div className="space-y-4 text-sm text-[var(--app-fg-muted)]">
-        <p className="animate-blur-in-delay-6">
+        <p>
           I&apos;m Bridger Tower. WIP is my design and engineering studio,
           focused on building products at the intersection of AI, design, and
           human-computer interaction.
         </p>
 
-        <p className="animate-blur-in-delay-7">
+        <p>
           I come from a marketing and advertising background, so I care deeply
           about what people actually do, not just what software can do in
           theory.
         </p>
 
-        <p className="animate-blur-in-delay-7">
+        <p>
           My work is about making advanced systems feel clear and practical:
           strong product thinking, sharp interaction design, clean execution,
           and business outcomes.
         </p>
 
-        <p className="animate-blur-in-delay-7">
+        <p>
           I focus on closing the gap between technical capability and usable
           experience, especially in AI products where most teams still
           over-index on complexity.
         </p>
 
-        <p className="animate-blur-in-delay-7">
+        <p>
           If you&apos;re working on similar questions,{" "}
           <a
             href={`mailto:${CONTACT_EMAIL}`}

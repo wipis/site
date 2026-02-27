@@ -19,7 +19,7 @@ export function SiteHeader({ homeHref = "/" }: SiteHeaderProps) {
       </div>
 
       <div className="fixed top-6 right-6 z-50 sm:hidden">
-        <Link href={homeHref} className="animate-blur-in-delay-2">
+        <Link href={homeHref} className="animate-blur-in-delay-1">
           <Image
             src={Logo}
             height={24}

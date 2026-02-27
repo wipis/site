@@ -16,14 +16,14 @@ const WORK_ITEMS: WorkItem[] = [
   { company: "Router.so", contributions: ["Brand", "Design", "Product"], href: "https://router.so" },
   { company: "Tackle.io", contributions: ["Brand", "Design", "Marketing"], href: "https://tackle.io" },
   { company: "Fly Super", contributions: ["AI", "Brand", "Design", "Product", "Web"], href: "https://flysuper.com" },
-  { company: "Offer Arc", contributions: ["AI", "Brand", "Design", "Product", "Web"], href: "https://offer.com" },
+  { company: "Offer Arc", contributions: ["AI", "Brand", "Design", "Product", "Web"], href: "https://offerarc.com" },
   { company: "RetainerOS", contributions: ["AI", "Design", "Product"], href: "https://retaineros.com" },
   { company: "Route", contributions: ["Brand", "Marketing"], href: "https://route.com" },
 ];
 
 export function WorkList() {
   return (
-    <section className="pt-12 animate-blur-in-delay-4" aria-labelledby="work-heading">
+    <section className="pt-12 animate-blur-in-delay-5" aria-labelledby="work-heading">
       <h3
         id="work-heading"
         className="text-sm tracking-[0.08em] uppercase text-[var(--app-fg)] mb-4 pb-1 border-b border-[var(--app-fg)]/20"

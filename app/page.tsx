@@ -19,7 +19,7 @@ export default function Home() {
         <div className="max-w-xl grid gap-12">
           <HomeIntro />
 
-          <figure className="animate-blur-in-delay-3">
+          <figure className="animate-blur-in-delay-4">
             <Image
               src={bridgeImage}
               alt="WIP studio homepage visual"
