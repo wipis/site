@@ -5,25 +5,89 @@ interface WorkItem {
 }
 
 const WORK_ITEMS: WorkItem[] = [
-  { company: "File Logic", contributions: ["AI", "Brand", "Design", "Product", "Web"], href: "https://filelogic.ai" },
-  { company: "Outr.ai", contributions: ["AI", "Brand", "Design", "Product", "Web"], href: "https://outr.ai" },
-  { company: "Vercel", contributions: ["Design", "Web"], href: "https://vercel.com" },
-  { company: "Browserbase", contributions: ["Design", "Web", "Marketing"], href: "https://browserbase.com" },
-  { company: "Julius", contributions: ["Design", "Product"], href: "https://julius.ai" },
-  { company: "Laravel", contributions: ["Web", "Marketing"], href: "https://laravel.com" },
-  { company: "Swyftfin", contributions: ["Brand", "Design", "Product"], href: "https://swyftfin.com" },
-  { company: "Ampry", contributions: ["Brand", "Design", "Product", "Marketing"], href: "https://ampry.com" },
-  { company: "Router.so", contributions: ["Brand", "Design", "Product"], href: "https://router.so" },
-  { company: "Tackle.io", contributions: ["Brand", "Design", "Marketing"], href: "https://tackle.io" },
-  { company: "Fly Super", contributions: ["AI", "Brand", "Design", "Product", "Web"], href: "https://flysuper.com" },
-  { company: "Offer Arc", contributions: ["AI", "Brand", "Design", "Product", "Web"], href: "https://offerarc.com" },
-  { company: "RetainerOS", contributions: ["AI", "Design", "Product"], href: "https://retaineros.com" },
-  { company: "Route", contributions: ["Brand", "Marketing"], href: "https://route.com" },
+  {
+    company: "File Logic",
+    contributions: ["AI", "Brand", "Design", "Product", "Web"],
+    href: "https://filelogic.ai",
+  },
+  {
+    company: "RetainerOS",
+    contributions: ["AI", "Brand", "Design", "Product", "Web"],
+    href: "https://retaineros.com",
+  },
+  {
+    company: "Outr.ai",
+    contributions: ["AI", "Brand", "Design", "Product", "Web"],
+    href: "https://outr.ai",
+  },
+  {
+    company: "Vercel",
+    contributions: ["Design", "Web"],
+    href: "https://vercel.com",
+  },
+  {
+    company: "Browserbase",
+    contributions: ["Design", "Web", "Marketing"],
+    href: "https://browserbase.com",
+  },
+  {
+    company: "Julius",
+    contributions: ["Design", "Product"],
+    href: "https://julius.ai",
+  },
+  {
+    company: "Laravel",
+    contributions: ["Web", "Marketing"],
+    href: "https://laravel.com",
+  },
+  {
+    company: "Swyftfin",
+    contributions: ["Brand", "Design", "Product"],
+    href: "https://swyftfin.com",
+  },
+  {
+    company: "Advocate Media",
+    contributions: ["Brand", "Design", "Marketing"],
+    href: "https://advocatemedia.com",
+  },
+  {
+    company: "Ampry",
+    contributions: ["Brand", "Design", "Product", "Marketing"],
+    href: "https://ampry.com",
+  },
+  {
+    company: "Router.so",
+    contributions: ["Brand", "Design", "Product"],
+    href: "https://router.so",
+  },
+  {
+    company: "Tackle.io",
+    contributions: ["Brand", "Design", "Marketing"],
+    href: "https://tackle.io",
+  },
+  {
+    company: "Fly Super",
+    contributions: ["AI", "Brand", "Design", "Product", "Web"],
+    href: "https://flysuper.com",
+  },
+  {
+    company: "Offer Arc",
+    contributions: ["AI", "Brand", "Design", "Product", "Web"],
+    href: "https://offerarc.com",
+  },
+  {
+    company: "Route",
+    contributions: ["Brand", "Marketing"],
+    href: "https://route.com",
+  },
 ];
 
 export function WorkList() {
   return (
-    <section className="pt-12 animate-blur-in-delay-5" aria-labelledby="work-heading">
+    <section
+      className="pt-12 animate-blur-in-delay-5"
+      aria-labelledby="work-heading"
+    >
       <h3
         id="work-heading"
         className="text-sm tracking-[0.08em] uppercase text-[var(--app-fg)] mb-4 pb-1 border-b border-[var(--app-fg)]/20"
