@@ -1,16 +1,18 @@
-import Image from "next/image";
-import bridgeImage from "@/public/bridge.jpg";
+import { createFileRoute } from "@tanstack/react-router";
+import { CopyEmail } from "~/components/copy-email";
+import { AboutSection } from "~/components/home/about-section";
+import { HomeIntro } from "~/components/home/home-intro";
+import { StarMarks } from "~/components/home/star-marks";
+import { ServicesSection } from "~/components/home/services-section";
+import { WorkList } from "~/components/home/work-list";
+import { SiteFooter } from "~/components/site-footer";
+import { SiteHeader } from "~/components/site-header";
 
-import { CopyEmail } from "./copy-email";
-import { AboutSection } from "@/components/home/about-section";
-import { HomeIntro } from "@/components/home/home-intro";
-import { StarMarks } from "@/components/home/star-marks";
-import { ServicesSection } from "@/components/home/services-section";
-import { WorkList } from "@/components/home/work-list";
-import { SiteFooter } from "@/components/site-footer";
-import { SiteHeader } from "@/components/site-header";
+export const Route = createFileRoute("/")({
+  component: Home,
+});
 
-export default function Home() {
+function Home() {
   return (
     <main className="home-page bg-[var(--app-bg)] min-h-screen text-[var(--app-fg)]">
       <SiteHeader />
@@ -20,11 +22,9 @@ export default function Home() {
           <HomeIntro />
 
           <figure className="animate-blur-in-delay-4">
-            <Image
-              src={bridgeImage}
+            <img
+              src="/bridge.jpg"
               alt="WIP studio homepage visual"
-              priority
-              placeholder="blur"
               className="w-full h-auto"
             />
             <figcaption className="mt-2 text-xs text-[var(--app-fg-muted)] leading-tight whitespace-nowrap overflow-hidden text-ellipsis">

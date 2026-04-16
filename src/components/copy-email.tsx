@@ -1,7 +1,5 @@
-"use client";
-
 import { useEffect, useRef, useState } from "react";
-import { CONTACT_EMAIL } from "./constants";
+import { CONTACT_EMAIL } from "~/lib/constants";
 
 interface CopyEmailProps {
   className?: string;
@@ -29,11 +27,9 @@ export function CopyEmail({ className = "" }: CopyEmailProps) {
         }
         timeoutRef.current = setTimeout(() => setCopied(false), 2000);
       } else {
-        // Fallback: open mail client
         window.location.href = `mailto:${CONTACT_EMAIL}`;
       }
     } catch {
-      // Fallback: open mail client
       window.location.href = `mailto:${CONTACT_EMAIL}`;
     }
   };

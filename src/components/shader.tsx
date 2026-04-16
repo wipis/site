@@ -1,8 +1,6 @@
-"use client";
-
 import { Dithering } from "@paper-design/shaders-react";
 import { useEffect, useState } from "react";
-import { APP_BACKGROUND } from "./constants";
+import { APP_BACKGROUND } from "~/lib/constants";
 
 interface ShaderProps {
   className?: string;

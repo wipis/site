@@ -1,4 +1,4 @@
-import { CONTACT_EMAIL } from "@/app/constants";
+import { CONTACT_EMAIL } from "~/lib/constants";
 
 export function AboutSection() {
   return (
@@ -23,20 +23,19 @@ export function AboutSection() {
 
         <p>
           I come from a marketing and advertising background, so I care deeply
-          about what people actually do, not just what software can do in
-          theory.
+          about what people actually do, not just what software can do in theory.
         </p>
 
         <p>
           My work is about making advanced systems feel clear and practical:
-          strong product thinking, sharp interaction design, clean execution,
-          and business outcomes.
+          strong product thinking, sharp interaction design, clean execution, and
+          business outcomes.
         </p>
 
         <p>
           I focus on closing the gap between technical capability and usable
-          experience, especially in AI products where most teams still
-          over-index on complexity.
+          experience, especially in AI products where most teams still over-index
+          on complexity.
         </p>
 
         <p>

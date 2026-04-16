@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
-import { COPYRIGHT_NAME } from "@/app/constants";
-import { ModeToggle } from "@/components/mode-toggle";
+import { COPYRIGHT_NAME } from "~/lib/constants";
+import { ModeToggle } from "~/components/mode-toggle";
 
 interface SiteFooterProps {
   rightContent?: ReactNode;

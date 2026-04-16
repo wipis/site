@@ -1,6 +1,4 @@
-"use client";
-
-import React, { useState } from "react";
+import { useState } from "react";
 
 const TILE_SIZE = 6;
 const TILE_FILL = "var(--app-fg)";
@@ -96,7 +94,9 @@ const WIP_RECTS = [
 
 const getPosition = (index: number, isHovered: boolean) => {
   if (isHovered) {
-    return index < WIP_RECTS.length ? WIP_RECTS[index] : { x: -TILE_SIZE, y: -TILE_SIZE };
+    return index < WIP_RECTS.length
+      ? WIP_RECTS[index]
+      : { x: -TILE_SIZE, y: -TILE_SIZE };
   }
   return ORIGINAL_RECTS[index];
 };

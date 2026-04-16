@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 @custom-variant dark (&:is(.dark *));
 
 @theme {
@@ -21,6 +21,7 @@
 @layer base {
   :root {
     color-scheme: light;
+    --font-inter: "Inter", sans-serif;
     --app-bg: #f5f5f5;
     --app-fg: #141414;
     --app-fg-muted: #666;

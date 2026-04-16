@@ -1,7 +1,10 @@
-"use client";
-
 import { useEffect } from "react";
-import { APP_BACKGROUND, APP_FOREGROUND, APP_FOREGROUND_MUTED, CONTACT_EMAIL } from "./constants";
+import {
+  APP_BACKGROUND,
+  APP_FOREGROUND,
+  APP_FOREGROUND_MUTED,
+  CONTACT_EMAIL,
+} from "~/lib/constants";
 
 export function ConsoleMessage() {
   useEffect(() => {
