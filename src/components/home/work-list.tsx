@@ -11,9 +11,9 @@ const WORK_ITEMS: WorkItem[] = [
     href: "https://filelogic.ai",
   },
   {
-    company: "RetainerOS",
+    company: "MatterOS",
     contributions: ["AI", "Brand", "Design", "Product", "Web"],
-    href: "https://retaineros.com",
+    href: "https://matter-os.com",
   },
   {
     company: "Outr.ai",
