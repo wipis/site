@@ -1,1 +1,1 @@
-# Homepage for WIP.IS
+homepage of wip.is
