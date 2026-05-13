@@ -14,35 +14,34 @@ export const Route = createFileRoute("/")({
 
 function Home() {
   return (
-    <main className="home-page bg-[var(--app-bg)] min-h-screen text-[var(--app-fg)]">
+    <main className="home-page bg-[--app-bg] min-h-screen text-[--app-fg]">
       <SiteHeader />
-
       <article className="relative z-40 max-w-2xl mx-auto px-6 pt-32 pb-24">
         <div className="max-w-xl grid gap-12">
           <HomeIntro />
-
-          <figure className="animate-blur-in-delay-4">
-            <img
-              src="/bridge.jpg"
-              alt="WIP studio homepage visual"
-              className="w-full h-auto"
-            />
-            <figcaption className="mt-2 text-xs text-[var(--app-fg-muted)] leading-tight whitespace-nowrap overflow-hidden text-ellipsis">
-              Waterloo Bridge, London, at Sunset, 1904, Claude Monet
-            </figcaption>
-          </figure>
-
+          <HomepageImage />
           <WorkList />
-
           <AboutSection />
-
           <ServicesSection />
-
           <StarMarks />
         </div>
       </article>
-
       <SiteFooter rightContent={<CopyEmail />} />
     </main>
   );
 }
+
+const HomepageImage = () => {
+  return (
+    <figure className="animate-blur-in-delay-4">
+      <img
+        src="/bridge.jpg"
+        alt="WIP studio homepage visual"
+        className="w-full h-auto"
+      />
+      <figcaption className="mt-2 text-xs text-[--app-fg-muted] leading-tight whitespace-nowrap overflow-hidden text-ellipsis">
+        Waterloo Bridge, London, at Sunset, 1904, Claude Monet
+      </figcaption>
+    </figure>
+  );
+};

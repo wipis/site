@@ -9,7 +9,7 @@ interface SiteHeaderProps {
 export function SiteHeader({ homeHref = "/" }: SiteHeaderProps) {
   return (
     <>
-      <div className="fixed top-6 left-6 z-50 hidden sm:block">
+      <div className="fixed right-6 top-6 z-50 hidden sm:block">
         <Link to={homeHref} className="animate-blur-in-delay-1">
           <h1 className="sr-only">{BRAND_NAME}</h1>
           <PixelRearrange />
