@@ -1,8 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { AboutSection } from "~/components/home/about-section";
 import { HomeIntro } from "~/components/home/home-intro";
 import { StarMarks } from "~/components/home/star-marks";
-import { ServicesSection } from "~/components/home/services-section";
 import { WorkList } from "~/components/home/work-list";
 import { SiteFooter } from "~/components/site-footer";
 import { SiteHeader } from "~/components/site-header";
@@ -19,8 +17,6 @@ function Home() {
         <div className="max-w-xl grid gap-12">
           <HomeIntro />
           <WorkList />
-          <AboutSection />
-          <ServicesSection />
           <StarMarks />
         </div>
       </article>

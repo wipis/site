@@ -5,3 +5,5 @@ export const APP_FOREGROUND_MUTED = "#888";
 export const CONTACT_EMAIL = "bt@wip.is";
 export const BRAND_NAME = "Work In Progress";
 export const COPYRIGHT_NAME = "Bridger Tower";
+export const DOTTED_LINK_CLASSNAME =
+  "underline decoration-dotted underline-offset-2 decoration-[var(--app-fg-muted)] hover:text-[var(--app-fg)] hover:decoration-[var(--app-fg)]";

@@ -38,7 +38,7 @@ export function CopyEmail({ className = "" }: CopyEmailProps) {
     <button
       type="button"
       onClick={handleCopy}
-      className={`inline font-light text-[var(--app-fg)] hover:opacity-70 transition-opacity cursor-pointer ${className}`}
+      className={`inline font-light text-[var(--app-fg)] transition-colors cursor-pointer ${className}`}
     >
       {copied ? "copied" : CONTACT_EMAIL}
     </button>

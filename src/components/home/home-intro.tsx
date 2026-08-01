@@ -1,33 +1,35 @@
 import { CopyEmail } from "~/components/copy-email";
+import { DOTTED_LINK_CLASSNAME } from "~/lib/constants";
 
 export function HomeIntro() {
   return (
-    <section className="grid gap-3 pr-20 md:pr-0">
-      <h2 className="font-light tracking-tight mb-2">
+    <section className="pr-20 md:pr-0">
+      <h2 className="font-light tracking-tight mb-12">
         Work in Progress / Applied Design
       </h2>
 
-      <p className="text-[var(--app-fg)]">
-        Studio of{" "}
-        <a
-          href="https://bridger.to"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="underline underline-offset-2 hover:opacity-70 transition-opacity"
-        >
-          Bridger Tower
-        </a>
-        . Applying design, code, and AI to drive revenue.
-      </p>
+      <div className="grid gap-3">
+        <p className="text-[var(--app-fg)]">
+          Design and Engineering Studio by{" "}
+          <a
+            href="https://bridger.to"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={DOTTED_LINK_CLASSNAME}
+          >
+            Bridger Tower
+          </a>
+          .
+        </p>
 
-      <p className="text-[var(--app-fg-muted)]">
-        A design and engineering studio helping teams shape brand, product, and
-        web experiences that are clear, useful, and built to convert.
-      </p>
+        <p className="text-[var(--app-fg-muted)]">
+          A small number of engagements at a time.
+        </p>
 
-      <p className="text-[var(--app-fg-muted)]">
-        Contact: <CopyEmail className="underline underline-offset-2" />
-      </p>
+        <p className="text-[var(--app-fg-muted)]">
+          <CopyEmail className={DOTTED_LINK_CLASSNAME} />
+        </p>
+      </div>
     </section>
   );
 }

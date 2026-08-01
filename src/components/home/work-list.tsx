@@ -1,157 +1,80 @@
+import { DOTTED_LINK_CLASSNAME } from "~/lib/constants";
+
 interface WorkItem {
   company: string;
-  contributions: string[];
-  href?: string;
+  href: string;
 }
 
 const WORK_ITEMS: WorkItem[] = [
-  {
-    company: "Vercel",
-    contributions: ["Design", "Web"],
-    href: "https://vercel.com",
-  },
-  {
-    company: "Laravel",
-    contributions: ["Web", "Marketing"],
-    href: "https://laravel.com",
-  },
-  {
-    company: "Browserbase",
-    contributions: ["Design", "Web", "Marketing"],
-    href: "https://browserbase.com",
-  },
-  {
-    company: "Supermetal",
-    contributions: ["Brand", "Design", "Product", "Web"],
-    href: "https://supermetal.io",
-  },
-  {
-    company: "Julius",
-    contributions: ["Design", "Product"],
-    href: "https://julius.ai",
-  },
-  {
-    company: "Route",
-    contributions: ["Brand", "Marketing"],
-    href: "https://route.com",
-  },
-  {
-    company: "Tackle.io",
-    contributions: ["Brand", "Design", "Marketing"],
-    href: "https://tackle.io",
-  },
-  {
-    company: "ShipGTM",
-    contributions: ["Brand", "Design", "Product", "Marketing", "Web"],
-    href: "https://shipgtm.com",
-  },
-  {
-    company: "Outr.ai",
-    contributions: ["AI", "Brand", "Design", "Product", "Web"],
-    href: "https://outr.ai",
-  },
-  {
-    company: "File Logic",
-    contributions: ["AI", "Brand", "Design", "Product", "Web"],
-    href: "https://filelogic.ai",
-  },
-  {
-    company: "Ampry",
-    contributions: ["Brand", "Design", "Product", "Marketing"],
-    href: "https://ampry.com",
-  },
-  {
-    company: "Swyftfin",
-    contributions: ["Brand", "Design", "Product"],
-    href: "https://swyftfin.com",
-  },
-  {
-    company: "MatterOS",
-    contributions: ["AI", "Brand", "Design", "Product", "Web"],
-    href: "https://matter-os.com",
-  },
-  {
-    company: "Router.so",
-    contributions: ["Brand", "Design", "Product"],
-    href: "https://router.so",
-  },
-  {
-    company: "Advocate Media",
-    contributions: ["Brand", "Design", "Marketing"],
-    href: "https://advocatemedia.com",
-  },
-  {
-    company: "Offer Arc",
-    contributions: ["AI", "Brand", "Design", "Product", "Web"],
-    href: "https://offerarc.com",
-  },
+  { company: "Vercel", href: "https://vercel.com" },
+  { company: "Laravel", href: "https://laravel.com" },
+  { company: "Browserbase", href: "https://browserbase.com" },
+  { company: "Supermetal", href: "https://supermetal.io" },
+  { company: "Julius", href: "https://julius.ai" },
+  { company: "Route", href: "https://route.com" },
+  { company: "Tackle.io", href: "https://tackle.io" },
+  { company: "Outr.ai", href: "https://outr.ai" },
+  { company: "File Logic", href: "https://filelogic.ai" },
+  { company: "Ampry", href: "https://ampry.com" },
+  { company: "Swyftfin", href: "https://swyftfin.com" },
+  { company: "MatterOS", href: "https://matter-os.com" },
+  { company: "Advocate Media", href: "https://advocatemedia.com" },
+  { company: "Offer Arc", href: "https://offerarc.com" },
+  { company: "Alpine Codex", href: "https://alpinecodex.com" },
 ];
+
+const PROJECT_ITEMS: WorkItem[] = [
+  { company: "ShipGTM", href: "https://shipgtm.com" },
+  { company: "Router.so", href: "https://router.so" },
+  { company: "Wrk.so", href: "https://wrk.so" },
+  { company: "Components", href: "https://components.work" },
+  { company: "Next WP", href: "https://next-wp.com" },
+  { company: "Craft Design System", href: "https://github.com/brijr/craft" },
+  { company: "Emoji to Favicon", href: "https://github.com/brijr/favicon" },
+  { company: "Meta MCP", href: "https://github.com/brijr/meta-mcp" },
+];
+
+function LinkedList({
+  label,
+  items,
+}: {
+  label: string;
+  items: WorkItem[];
+}) {
+  return (
+    <p className="text-[var(--app-fg-muted)]">
+      {label}{" "}
+      {items.map((item, index) => {
+        const isLast = index === items.length - 1;
+        const separator = isLast
+          ? "."
+          : index === items.length - 2
+            ? ", and "
+            : ", ";
+
+        return (
+          <span key={item.company}>
+            <a
+              href={item.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={DOTTED_LINK_CLASSNAME}
+            >
+              {item.company}
+            </a>
+            {separator}
+          </span>
+        );
+      })}
+    </p>
+  );
+}
 
 export function WorkList() {
   return (
-    <section
-      className="pt-12"
-      aria-labelledby="work-heading"
-    >
-      <h3
-        id="work-heading"
-        className="text-sm tracking-[0.08em] uppercase text-[var(--app-fg)] mb-4 pb-1 border-b border-[var(--app-fg)]/20"
-      >
-        Work
-      </h3>
-
-      <ul className="space-y-1">
-        {WORK_ITEMS.map((item) => (
-          <li key={item.company} className="py-1.5">
-            {item.href ? (
-              <a
-                href={item.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex items-center gap-2"
-              >
-                <span className="shrink-0 text-sm leading-none font-light tracking-tight text-[var(--app-fg)]">
-                  {item.company}
-                </span>
-                <span
-                  aria-hidden="true"
-                  className="h-px flex-1 bg-[var(--app-fg-muted)]/20"
-                />
-                <span className="shrink-0 flex flex-wrap gap-1 justify-end">
-                  {item.contributions.map((tag) => (
-                    <span
-                      key={tag}
-                      className="inline-flex items-center rounded-full bg-[var(--app-fg)]/[0.08] px-2 py-0.5 text-[10px] leading-none tracking-[0.02em] text-[var(--app-fg-muted)] group-hover:text-[var(--app-fg)] transition-colors"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </span>
-              </a>
-            ) : (
-              <span className="flex items-center gap-2">
-                <span className="shrink-0 text-sm leading-none font-light tracking-tight text-[var(--app-fg)]/80">
-                  {item.company}
-                </span>
-                <span
-                  aria-hidden="true"
-                  className="h-px flex-1 bg-[var(--app-fg-muted)]/20"
-                />
-                <span className="shrink-0 flex flex-wrap gap-1 justify-end">
-                  {item.contributions.map((tag) => (
-                    <span
-                      key={tag}
-                      className="inline-flex items-center rounded-full bg-[var(--app-fg)]/[0.08] px-2 py-0.5 text-[10px] leading-none tracking-[0.02em] text-[var(--app-fg-muted)]"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </span>
-              </span>
-            )}
-          </li>
-        ))}
-      </ul>
+    <section aria-label="Selected work" className="grid gap-3">
+      <LinkedList label="Work includes" items={WORK_ITEMS} />
+      <LinkedList label="Projects include" items={PROJECT_ITEMS} />
     </section>
   );
 }

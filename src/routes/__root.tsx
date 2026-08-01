@@ -20,7 +20,7 @@ export const Route = createRootRoute({
       {
         name: "description",
         content:
-          "Studio of Bridger Tower. Applying design, code, and AI to drive revenue.",
+          "Studio of Bridger Tower. A small number of engagements at a time.",
       },
       { name: "theme-color", content: "#222222" },
       // OpenGraph
@@ -28,7 +28,7 @@ export const Route = createRootRoute({
       {
         property: "og:description",
         content:
-          "Applying design, code, and AI to drive revenue across AI, brand, design, marketing, product, and web.",
+          "Studio of Bridger Tower. A small number of engagements at a time.",
       },
       { property: "og:url", content: SITE_URL },
       { property: "og:site_name", content: "WIP" },
@@ -40,7 +40,7 @@ export const Route = createRootRoute({
       {
         name: "twitter:description",
         content:
-          "Applying design, code, and AI to drive revenue across AI, brand, design, marketing, product, and web.",
+          "Studio of Bridger Tower. A small number of engagements at a time.",
       },
       { name: "twitter:image", content: `${SITE_URL}/twitter-image.png` },
     ],
