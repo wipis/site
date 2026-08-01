@@ -8,21 +8,28 @@ interface SiteFooterProps {
 
 export function SiteFooter({ rightContent }: SiteFooterProps) {
   return (
-    <footer className="fixed bottom-0 right-0 z-50 flex items-center gap-3 p-6">
-      <ModeToggle />
-      <p className="font-light text-sm text-[var(--app-fg-muted)]">
-        &copy; {new Date().getFullYear()} /{" "}
-        <a
-          href="https://bridger.to"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:text-[var(--app-fg)] transition-colors"
-        >
-          {COPYRIGHT_NAME}
-        </a>
-      </p>
+    <footer className="pointer-events-none fixed inset-x-0 bottom-0 z-50">
+      <div
+        aria-hidden="true"
+        className="absolute inset-x-0 bottom-0 h-32 bg-linear-to-t from-[var(--app-bg)] from-50% to-transparent"
+      />
 
-      {rightContent}
+      <div className="pointer-events-auto relative flex items-center justify-end gap-3 p-6">
+        <ModeToggle />
+        <p className="font-light text-sm text-[var(--app-fg-muted)]">
+          &copy; {new Date().getFullYear()} /{" "}
+          <a
+            href="https://bridger.to"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-[var(--app-fg)] transition-colors"
+          >
+            {COPYRIGHT_NAME}
+          </a>
+        </p>
+
+        {rightContent}
+      </div>
     </footer>
   );
 }
