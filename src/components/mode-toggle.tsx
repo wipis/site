@@ -15,7 +15,7 @@ export function ModeToggle() {
     <button
       type="button"
       onClick={() => setTheme(isDark ? "light" : "dark")}
-      className="animate-blur-in-delay-9 inline-flex items-center justify-center text-[var(--app-fg-muted)] hover:text-[var(--app-fg)] transition-colors"
+      className="inline-flex items-center justify-center text-[var(--app-fg-muted)] hover:text-[var(--app-fg)] transition-colors"
       aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
     >
       {isDark ? (

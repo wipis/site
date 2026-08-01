@@ -4,7 +4,7 @@ export function AboutSection() {
   return (
     <section
       id="about"
-      className="pt-12 animate-blur-in-delay-6"
+      className="pt-12"
       aria-labelledby="about-heading"
     >
       <h3

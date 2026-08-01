@@ -40,7 +40,7 @@ export function ServicesSection() {
   return (
     <section
       id="services"
-      className="pt-12 animate-blur-in-delay-7"
+      className="pt-12"
       aria-labelledby="services-heading"
     >
       <h3

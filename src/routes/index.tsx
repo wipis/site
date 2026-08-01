@@ -16,7 +16,7 @@ function Home() {
   return (
     <main className="home-page bg-[--app-bg] min-h-screen text-[--app-fg]">
       <SiteHeader />
-      <article className="relative z-40 max-w-2xl mx-auto px-6 pt-32 pb-24">
+      <article className="relative z-40 p-6 pb-24">
         <div className="max-w-xl grid gap-12">
           <HomeIntro />
           <HomepageImage />
@@ -33,7 +33,7 @@ function Home() {
 
 const HomepageImage = () => {
   return (
-    <figure className="animate-blur-in-delay-4">
+    <figure className="">
       <img
         src="/bridge.jpg"
         alt="WIP studio homepage visual"

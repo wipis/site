@@ -85,7 +85,7 @@ const WORK_ITEMS: WorkItem[] = [
 export function WorkList() {
   return (
     <section
-      className="pt-12 animate-blur-in-delay-5"
+      className="pt-12"
       aria-labelledby="work-heading"
     >
       <h3
