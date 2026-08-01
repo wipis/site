@@ -1,4 +1,6 @@
-import { NAME_LINK_CLASSNAME } from "~/lib/constants";
+import type { ReactNode } from "react";
+import { CopyEmail } from "~/components/copy-email";
+import { DOTTED_LINK_CLASSNAME } from "~/lib/constants";
 
 interface WorkItem {
   company: string;
@@ -34,47 +36,62 @@ const PROJECT_ITEMS: WorkItem[] = [
   { company: "Meta MCP", href: "https://github.com/brijr/meta-mcp" },
 ];
 
+const SOCIAL_ITEMS: WorkItem[] = [
+  { company: "X", href: "https://x.com/wipdes" },
+  {
+    company: "LinkedIn",
+    href: "https://www.linkedin.com/company/104856918",
+  },
+  { company: "GitHub", href: "https://github.com/wipis" },
+  { company: "Telegram", href: "https://t.me/wipis" },
+];
+
 function LinkedList({
   label,
   items,
+  prefix,
 }: {
   label: string;
   items: WorkItem[];
+  prefix?: ReactNode;
 }) {
   return (
-    <p className="text-[var(--app-fg-muted)]">
-      {label}{" "}
-      {items.map((item, index) => {
-        const isLast = index === items.length - 1;
-        const separator = isLast
-          ? "."
-          : index === items.length - 2
-            ? ", and "
-            : ", ";
-
-        return (
-          <span key={item.company}>
-            <a
-              href={item.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={NAME_LINK_CLASSNAME}
-            >
-              {item.company}
-            </a>
-            {separator}
-          </span>
-        );
-      })}
+    <p className="text-[var(--app-fg)] leading-relaxed">
+      <span className="text-[var(--app-fg-muted)]">{label}</span>
+      <span className="text-[var(--app-fg-muted)]"> — </span>
+      {prefix}
+      {prefix && items.length > 0 ? (
+        <span className="text-[var(--app-fg-muted)]">, </span>
+      ) : null}
+      {items.map((item, index) => (
+        <span key={item.company}>
+          <a
+            href={item.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={DOTTED_LINK_CLASSNAME}
+          >
+            {item.company}
+          </a>
+          {index < items.length - 1 ? (
+            <span className="text-[var(--app-fg-muted)]">, </span>
+          ) : null}
+        </span>
+      ))}
     </p>
   );
 }
 
 export function WorkList() {
   return (
-    <section aria-label="Selected work" className="grid gap-3">
-      <LinkedList label="Work includes" items={WORK_ITEMS} />
-      <LinkedList label="Projects include" items={PROJECT_ITEMS} />
+    <section aria-label="Selected work" className="grid gap-4">
+      <LinkedList label="Work" items={WORK_ITEMS} />
+      <LinkedList label="Projects" items={PROJECT_ITEMS} />
+      <LinkedList
+        label="Social"
+        prefix={<CopyEmail className={DOTTED_LINK_CLASSNAME} />}
+        items={SOCIAL_ITEMS}
+      />
     </section>
   );
 }

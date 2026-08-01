@@ -14,7 +14,7 @@ function Home() {
     <main className="home-page bg-[--app-bg] min-h-screen text-[--app-fg]">
       <SiteHeader />
       <article className="relative z-40 p-6 pb-24">
-        <div className="max-w-xl grid gap-12">
+        <div className="max-w-lg grid gap-12">
           <HomeIntro />
           <WorkList />
           <StarMarks />
