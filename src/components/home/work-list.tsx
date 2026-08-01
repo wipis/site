@@ -1,4 +1,4 @@
-import { DOTTED_LINK_CLASSNAME } from "~/lib/constants";
+import { NAME_LINK_CLASSNAME } from "~/lib/constants";
 
 interface WorkItem {
   company: string;
@@ -29,7 +29,7 @@ const PROJECT_ITEMS: WorkItem[] = [
   { company: "Wrk.so", href: "https://wrk.so" },
   { company: "Components", href: "https://components.work" },
   { company: "Next WP", href: "https://next-wp.com" },
-  { company: "Craft Design System", href: "https://github.com/brijr/craft" },
+  { company: "Craft Design System", href: "https://craft-ds.com" },
   { company: "Emoji to Favicon", href: "https://github.com/brijr/favicon" },
   { company: "Meta MCP", href: "https://github.com/brijr/meta-mcp" },
 ];
@@ -58,7 +58,7 @@ function LinkedList({
               href={item.href}
               target="_blank"
               rel="noopener noreferrer"
-              className={DOTTED_LINK_CLASSNAME}
+              className={NAME_LINK_CLASSNAME}
             >
               {item.company}
             </a>
