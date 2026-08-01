@@ -6,29 +6,9 @@ interface WorkItem {
 
 const WORK_ITEMS: WorkItem[] = [
   {
-    company: "File Logic",
-    contributions: ["AI", "Brand", "Design", "Product", "Web"],
-    href: "https://filelogic.ai",
-  },
-  {
-    company: "Outr.ai",
-    contributions: ["AI", "Brand", "Design", "Product", "Web"],
-    href: "https://outr.ai",
-  },
-  {
     company: "Vercel",
     contributions: ["Design", "Web"],
     href: "https://vercel.com",
-  },
-  {
-    company: "Browserbase",
-    contributions: ["Design", "Web", "Marketing"],
-    href: "https://browserbase.com",
-  },
-  {
-    company: "Julius",
-    contributions: ["Design", "Product"],
-    href: "https://julius.ai",
   },
   {
     company: "Laravel",
@@ -36,29 +16,24 @@ const WORK_ITEMS: WorkItem[] = [
     href: "https://laravel.com",
   },
   {
-    company: "Swyftfin",
-    contributions: ["Brand", "Design", "Product"],
-    href: "https://swyftfin.com",
+    company: "Browserbase",
+    contributions: ["Design", "Web", "Marketing"],
+    href: "https://browserbase.com",
   },
   {
-    company: "Advocate Media",
-    contributions: ["Brand", "Design", "Marketing"],
-    href: "https://advocatemedia.com",
+    company: "Supermetal",
+    contributions: ["Brand", "Design", "Product", "Web"],
+    href: "https://supermetal.io",
   },
   {
-    company: "MatterOS",
-    contributions: ["AI", "Brand", "Design", "Product", "Web"],
-    href: "https://matter-os.com",
+    company: "Julius",
+    contributions: ["Design", "Product"],
+    href: "https://julius.ai",
   },
   {
-    company: "Ampry",
-    contributions: ["Brand", "Design", "Product", "Marketing"],
-    href: "https://ampry.com",
-  },
-  {
-    company: "Router.so",
-    contributions: ["Brand", "Design", "Product"],
-    href: "https://router.so",
+    company: "Route",
+    contributions: ["Brand", "Marketing"],
+    href: "https://route.com",
   },
   {
     company: "Tackle.io",
@@ -66,19 +41,49 @@ const WORK_ITEMS: WorkItem[] = [
     href: "https://tackle.io",
   },
   {
-    company: "Fly Super",
+    company: "ShipGTM",
+    contributions: ["Brand", "Design", "Product", "Marketing", "Web"],
+    href: "https://shipgtm.com",
+  },
+  {
+    company: "Outr.ai",
     contributions: ["AI", "Brand", "Design", "Product", "Web"],
-    href: "https://flysuper.com",
+    href: "https://outr.ai",
+  },
+  {
+    company: "File Logic",
+    contributions: ["AI", "Brand", "Design", "Product", "Web"],
+    href: "https://filelogic.ai",
+  },
+  {
+    company: "Ampry",
+    contributions: ["Brand", "Design", "Product", "Marketing"],
+    href: "https://ampry.com",
+  },
+  {
+    company: "Swyftfin",
+    contributions: ["Brand", "Design", "Product"],
+    href: "https://swyftfin.com",
+  },
+  {
+    company: "MatterOS",
+    contributions: ["AI", "Brand", "Design", "Product", "Web"],
+    href: "https://matter-os.com",
+  },
+  {
+    company: "Router.so",
+    contributions: ["Brand", "Design", "Product"],
+    href: "https://router.so",
+  },
+  {
+    company: "Advocate Media",
+    contributions: ["Brand", "Design", "Marketing"],
+    href: "https://advocatemedia.com",
   },
   {
     company: "Offer Arc",
     contributions: ["AI", "Brand", "Design", "Product", "Web"],
     href: "https://offerarc.com",
-  },
-  {
-    company: "Route",
-    contributions: ["Brand", "Marketing"],
-    href: "https://route.com",
   },
 ];
 
