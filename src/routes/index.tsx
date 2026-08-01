@@ -19,7 +19,6 @@ function Home() {
       <article className="relative z-40 p-6 pb-24">
         <div className="max-w-xl grid gap-12">
           <HomeIntro />
-          <HomepageImage />
           <WorkList />
           <AboutSection />
           <ServicesSection />
@@ -30,15 +29,3 @@ function Home() {
     </main>
   );
 }
-
-const HomepageImage = () => {
-  return (
-    <figure>
-      <img
-        src="/bridge.jpg"
-        alt="WIP studio homepage visual"
-        className="w-full h-auto"
-      />
-    </figure>
-  );
-};
