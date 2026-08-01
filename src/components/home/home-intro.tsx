@@ -2,7 +2,7 @@ export function HomeIntro() {
   return (
     <section className="grid gap-3 pr-20 md:pr-0">
       <h2 className="text-[2rem] font-light tracking-tight mb-2">
-        Work in Progress
+        Work in Progress / Applied Design
       </h2>
 
       <p className="text-[var(--app-fg)]">
