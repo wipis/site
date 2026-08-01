@@ -40,7 +40,7 @@ const SOCIAL_ITEMS: WorkItem[] = [
   { company: "X", href: "https://x.com/wipdes" },
   {
     company: "LinkedIn",
-    href: "https://www.linkedin.com/company/104856918",
+    href: "https://www.linkedin.com/company/wipdes",
   },
   { company: "GitHub", href: "https://github.com/wipis" },
   { company: "Telegram", href: "https://t.me/wipis" },

@@ -12,7 +12,7 @@ export const DOTTED_LINK_CLASSNAME =
   "underline decoration-dotted underline-offset-2 decoration-[var(--app-fg-muted)] hover:text-[var(--app-fg)] hover:decoration-[var(--app-fg)]";
 export const SOCIAL_LINKS = [
   "https://x.com/wipdes",
-  "https://www.linkedin.com/company/104856918",
+  "https://www.linkedin.com/company/wipdes",
   "https://github.com/wipis",
   "https://t.me/wipis",
   "https://bridger.to",
