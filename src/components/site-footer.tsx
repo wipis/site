@@ -11,15 +11,7 @@ export function SiteFooter() {
 
       <div className="pointer-events-auto relative flex items-center justify-end gap-3 p-6">
         <p className="font-light text-sm text-[var(--app-fg-muted)]">
-          &copy; {new Date().getFullYear()} /{" "}
-          <a
-            href="https://bridger.to"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-[var(--app-fg)] transition-colors"
-          >
-            {COPYRIGHT_NAME}
-          </a>
+          &copy; {new Date().getFullYear()} / {COPYRIGHT_NAME}
         </p>
 
         <ModeToggle />
