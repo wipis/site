@@ -1,12 +1,7 @@
-import type { ReactNode } from "react";
 import { COPYRIGHT_NAME } from "~/lib/constants";
 import { ModeToggle } from "~/components/mode-toggle";
 
-interface SiteFooterProps {
-  rightContent?: ReactNode;
-}
-
-export function SiteFooter({ rightContent }: SiteFooterProps) {
+export function SiteFooter() {
   return (
     <footer className="pointer-events-none fixed inset-x-0 bottom-0 z-50">
       <div
@@ -15,7 +10,6 @@ export function SiteFooter({ rightContent }: SiteFooterProps) {
       />
 
       <div className="pointer-events-auto relative flex items-center justify-end gap-3 p-6">
-        <ModeToggle />
         <p className="font-light text-sm text-[var(--app-fg-muted)]">
           &copy; {new Date().getFullYear()} /{" "}
           <a
@@ -28,7 +22,7 @@ export function SiteFooter({ rightContent }: SiteFooterProps) {
           </a>
         </p>
 
-        {rightContent}
+        <ModeToggle />
       </div>
     </footer>
   );

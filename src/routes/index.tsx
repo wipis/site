@@ -1,5 +1,4 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { CopyEmail } from "~/components/copy-email";
 import { AboutSection } from "~/components/home/about-section";
 import { HomeIntro } from "~/components/home/home-intro";
 import { StarMarks } from "~/components/home/star-marks";
@@ -25,7 +24,7 @@ function Home() {
           <StarMarks />
         </div>
       </article>
-      <SiteFooter rightContent={<CopyEmail />} />
+      <SiteFooter />
     </main>
   );
 }

@@ -1,7 +1,9 @@
+import { CopyEmail } from "~/components/copy-email";
+
 export function HomeIntro() {
   return (
     <section className="grid gap-3 pr-20 md:pr-0">
-      <h2 className="text-[2rem] font-light tracking-tight mb-2">
+      <h2 className="font-light tracking-tight mb-2">
         Work in Progress / Applied Design
       </h2>
 
@@ -19,8 +21,12 @@ export function HomeIntro() {
       </p>
 
       <p className="text-[var(--app-fg-muted)]">
-        I help teams shape brand, product, and web experiences that are clear,
-        useful, and built to convert.
+        A design and engineering studio helping teams shape brand, product, and
+        web experiences that are clear, useful, and built to convert.
+      </p>
+
+      <p className="text-[var(--app-fg-muted)]">
+        Contact: <CopyEmail className="underline underline-offset-2" />
       </p>
     </section>
   );
