@@ -14,6 +14,14 @@ export default defineConfig({
     viteReact(),
     nitro({
       preset: "cloudflare-pages",
+      handlers: [
+        // Runs before every Worker request. Not auto-scanned: the nitro Vite
+        // plugin does not pick up server/middleware/ unless serverDir is set.
+        {
+          middleware: true,
+          handler: "./server/middleware/canonical-host.ts",
+        },
+      ],
     }),
   ],
 });
